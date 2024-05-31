@@ -31,7 +31,7 @@ contactForm?.addEventListener("submit", async(event)=>{
   }
   try {
     const response = await axios.post("https://site--backend-tripadvisor--j7d4wbg742nf.code.run/send-email", allInformations);
-    alert(response.message)
+    alert(response.data)
 
   } catch (error) {
     alert("Une erreur est survenue")
