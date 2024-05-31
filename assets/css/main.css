@@ -133,6 +133,8 @@ header .navigation {
   background-color: #FCFCFC;
   border-radius: 15px;
   padding:50px;
+  width:60%;
+
   position: relative;
 }
 .form-contact input, .form-contact button, .form-contact textarea{
@@ -154,7 +156,6 @@ input:hover, textarea:hover{
   font-family: "TS-Med";
   font-size:1.5em;
   margin-bottom:30Px;
-  width:60%;
 }
 .form-contact button{
   font-family: TS-Med;
