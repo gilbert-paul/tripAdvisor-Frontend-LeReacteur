@@ -25,6 +25,8 @@ contactForm?.addEventListener("submit", async(event)=>{
     subject:document.querySelector("#subject").value,
     message:document.querySelector("#message").value,
   }
-  const response = await axios.post("...", (allInformations))
-  console.log(response)
+  console.log("ok")
+  const response = await axios.post("https://site--backend-tripadvisor--j7d4wbg742nf.code.run/send-email", allInformations);
+  console.log("éok")
+  alert(response)
 })
