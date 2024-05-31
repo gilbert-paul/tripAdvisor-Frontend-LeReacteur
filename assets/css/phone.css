@@ -1,0 +1,49 @@
+
+
+  header .container img {
+    width: 190px;
+    height: 60px;
+  }
+  main.container nav.__principal {
+    flex-wrap: wrap;
+
+  }
+
+  .navigation div:not(.shop){
+    display:initial;
+  }
+  .navigation button{
+    display:initial;
+  }
+  
+
+  
+  
+  main.container nav.__principal div {
+    width:calc(25% - 10px);
+    flex-shrink: 0;
+  }
+  main h1 {
+    font-size: 3.375rem;
+  }
+  section.photos {
+    height:430px;
+  }
+  section.photos div:last-child {
+    display: flex;
+  width:400px;
+}
+.activity-card {
+  flex-direction: row;
+
+}
+.activity-card .informations-card{
+  margin-bottom:0px;
+}
+.carousel-card article{
+  width:calc((100% - 30px) /2.5);
+  flex-shrink: 0;
+}
+.guide .visits-card article{
+  width:calc((100% - 30px) /2.5);
+}

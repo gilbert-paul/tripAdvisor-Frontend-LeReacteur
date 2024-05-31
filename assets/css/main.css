@@ -1,0 +1,603 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: TS-Reg, Arial, Helvetica, sans-serif;
+}
+.no-scroll{
+  overflow-y: hidden;
+}
+a {
+  color: #000000
+}
+
+.container {
+  max-width: 1135px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+button {
+  border: none;
+}
+
+header {
+  display: flex;
+  background-color: #ffffff;
+  border-bottom: solid 1px #e0e0e0;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1135px;
+  height: 60px;
+}
+
+header .container img {
+  width: 132px;
+  height: 30px;
+}
+
+header .navigation {
+  display: flex;
+  height: 42px;
+}
+
+.navigation div {
+  padding: 8px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.navigation div:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.navigation div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .bars-menu {
+  font-size: 1.5rem;
+  margin-right: 4px;
+}
+
+.navigation div a i {
+  font-size: 1.5rem;
+  margin-right: 4px;
+}
+
+
+.navigation div:not(.shop, .loupe, .bars-menu) {
+  display: none;
+}
+
+.navigation button {
+  display: none;
+}
+
+.navigation div a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.navigation div a p {
+  font-weight: 700;
+  display: none;
+}
+
+.navigation button {
+  background-color: #000000;
+  font-family: TS-Med;
+  font-size:1rem;
+
+  color: #FFFFFF;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0px 10px;
+  margin-left: 5px;
+  width: 150px;
+}
+
+.navigation button:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.contact{
+  background:rgba(0, 0, 0, 0.50);
+  position: fixed;
+  z-index:2;
+  width:100vw;
+  height:100vh;
+  display:none;
+  padding:20px;
+  align-items:center;
+  justify-content: center;
+}
+.form-contact{
+  display: flex;
+  flex-flow:column;
+  align-items: center;
+  justify-content:space-between;
+  background-color: #FCFCFC;
+  border-radius: 15px;
+  padding:50px;
+  position: relative;
+}
+.form-contact input, .form-contact button, .form-contact textarea{
+  margin-bottom:20px;
+  padding:16px 10px;
+  font-family: TS-Med;
+  font-size:1.075em;
+  border:solid 1px black
+}
+input::placeholder, textarea::placeholder, textarea{
+  font-family: TS-Med;
+  font-size:1.075em;
+}
+
+input:hover, textarea:hover{
+  border-color:#04aa6c
+}
+.form-contact p{
+  font-family: "TS-Med";
+  font-size:1.5em;
+  margin-bottom:30Px;
+}
+.form-contact button{
+  font-family: TS-Med;
+  background-color:#04aa6c;
+  color:#FCFCFC;
+  border-radius: 5px;
+  font-size:1.075em;
+  border:none;
+}
+.form-contact button:hover{
+cursor:pointer;
+opacity:.8
+}
+.show{
+  display:flex;
+}
+.close{
+  font-size:1.5em;
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+.close:hover{
+  opacity:0.5;
+  cursor:pointer;
+}
+
+main.container nav.__principal {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 26px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+main.container nav.__principal div {
+  border: solid 1px black;
+  border-radius: 15px;
+  padding: 12px 15px;
+  display: flex;
+  font-weight: 700;
+  width: auto;
+  justify-content: space-between;
+  align-items: top;
+  flex-shrink: 0;
+
+}
+
+main.container nav.__principal div:hover {
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer
+}
+
+main.container nav.__principal div p {
+  margin-right: 10px;
+
+}
+main.container nav.__principal div i {
+font-size:1.5rem;
+}
+
+main h1 {
+  padding-top: 20px;
+  font-size: 2rem;
+  line-height: 70px;
+  font-family: TS-Med;
+  font-weight: bold;
+
+}
+
+main h1~p {
+  font-size: 0.875rem;
+  margin-bottom: 30px;
+}
+
+main h1 span {
+  color: #ff5d5d;
+}
+
+/* section {
+  display: flex;
+} */
+
+section.photos {
+  height: 275px;
+  display: flex;
+}
+
+section.photos div {
+  object-fit: contain;
+}
+
+section.photos div img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+section.photos div img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+section.photos>div:first-child {
+  display: flex;
+  flex: 1;
+  margin-right: 2px;
+}
+
+section.photos div:last-child {
+  display: none;
+  flex-direction: column;
+  object-fit: contain;
+}
+
+section.photos div:last-child div:first-child {
+  height: calc(50% - 1px);
+  margin-bottom: 2px;
+  object-fit: cover;
+}
+
+section.photos div:last-child div:last-child {
+  height: calc(50% - 1px);
+  object-fit: cover;
+}
+
+
+nav.__secondary {
+  margin: 20px 0 40px;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  justify-content: space-between;
+}
+
+nav.__secondary div {
+  display: flex;
+  align-items: center;
+}
+
+nav.__secondary div i {
+  font-size: 0.625rem;
+  margin: 0 5px;
+}
+
+nav.__secondary .fa-caret-down {
+  font-size: 0.875rem;
+}
+
+nav.__secondary a {
+  text-decoration: none;
+}
+
+nav.__secondary a:hover {
+  text-decoration: underline;
+}
+
+section.description {
+  margin-bottom: 80px;
+}
+
+section.description div .description-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-card {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-weight: 700;
+  font-family: TS-Med;
+  margin-bottom: 30px;
+  font-size: 1.75rem;
+}
+
+section.description .description-card p {
+  font-size: 1.25rem;
+  line-height: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section.description h3 {
+  font-size: 2rem;
+  font-family: TS-Med;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+.travel-card {
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.travel-card .create-travel {
+  background-color: #ff5d5d;
+  padding: 32px;
+  flex: 1;
+}
+
+.travel-card .create-travel p {
+  margin-bottom: 24px;
+}
+
+.travel-card .create-travel button {
+  background-color: #000000;
+  color: white;
+  font-family: TS-Med;
+  font-size:1rem;
+  font-weight: bold;
+  height: 54px;
+  width: 154px;
+  border-radius: 14px;
+}
+
+.travel-card .create-travel button:hover {
+  background-color: #000000b3;
+}
+
+.travel-card .map-travel {
+  background-image: url(../img/image_trips_card_medium.png);
+  background-size: 100%, 100%;
+  flex: 1;
+}
+
+footer {
+  height: 156px;
+  background-color: #faf1ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.activity-card .informations-card {
+  flex: 1;
+  padding-right: 30px;
+
+}
+
+.activity-card .informations-card h4 {
+  font-family: "TS-Med";
+  font-size: 1.5rem;
+}
+
+.activity-card .informations-card p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.125rem;
+  margin: 20px 0;
+}
+
+.activity-card .informations-card a {
+  color: #545454;
+  font-weight: bold;
+}
+
+.activity-card .carousel-card {
+  flex: 3;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: 15px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.carousel-card .favori {
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-card .label-tripAdvisor {
+
+  width: 30px;
+  height: 40px;
+  border-radius: 20px 20px 6px 6px;
+  position: absolute;
+  background-color: #34E0A1;
+  bottom: 16px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.carousel-card .label-tripAdvisor i {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-top: 5px;
+  margin-bottom:0px;
+}
+
+.carousel-card .label-tripAdvisor span {
+  font-size: 0.625rem;
+  font-family: "TS-Med";
+  font-weight: bold;
+}
+
+.carousel-card .favori i {
+  color: #000000;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.carousel-card article {
+  width: calc((100% - 30px) /1.5);
+  flex-shrink: 0;
+}
+
+.carousel-card article:hover {
+  cursor: pointer;
+}
+
+.carousel-card .picture {
+  position: relative;
+}
+
+
+.carousel-card article img {
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 6px;
+  aspect-ratio: 20/15;
+}
+
+.carousel-card article:hover img {
+  opacity: .8;
+}
+
+.carousel-card article:hover h5 {
+  text-decoration: underline;
+}
+
+.carousel-card i,
+.carousel-card span {
+  font-size: 0.875rem;
+  color: #333333
+}
+
+.carousel-card h5 {
+  font-size: 1.125rem;
+  font-family: "TS-Med";
+  margin-bottom: 6px
+}
+
+.carousel-card i {
+  color: #04aa6c;
+  margin-bottom: 6px
+}
+
+.carousel-card p {
+  margin-top:6px;
+  font-size: 0.825rem;
+  color: #333333
+}
+
+.guide .visits-card {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.guide .visits-card article {
+  width: calc((100% - 30px) /1.5);
+  flex-shrink: 0;
+}
+
+.guide .visits-card article img:first-of-type {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  margin-bottom: 6px;
+}
+
+.guide .visits-card h5 {
+  font-family: "TS-Med";
+  font-size: 1.125rem;
+  margin-bottom: 6px;
+}
+
+.guide .visits-card p {
+  font-size: 0.875rem;
+  margin-bottom: 6px;
+}
+
+.guide .visits-card article div img:last-of-type {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin: 0 6px 0 0;
+}
+
+.guide .visits-card article span {
+  font-size: 0.875rem;
+}
+
+.guide .visits-card article div span:last-of-type {
+  font-family: "TS-Med";
+}
+
+.guide .visits-card article div {
+  display: flex;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
+}
+
+footer a {
+  font-weight: bold;
+}
+
+footer img {
+  width: 40px
+}
