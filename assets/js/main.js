@@ -25,8 +25,11 @@ contactForm?.addEventListener("submit", async(event)=>{
     subject:document.querySelector("#subject").value,
     message:document.querySelector("#message").value,
   }
-  console.log("ok")
+  const {firstname, lastname, email, subject, message} = allInformations
+  if(!firstname || !lastname || !email || !subject || !message){
+    alert("Merci de remplir tous les champs")
+  }
   const response = await axios.post("https://site--backend-tripadvisor--j7d4wbg742nf.code.run/send-email", allInformations);
-  console.log("éok")
-  alert(response)
+
+  alert(response.message)
 })

@@ -59,11 +59,11 @@
       <form class="form-contact">
         <p>Formulaire de contact :</p>
         <i class="icon-times close"></i>
-          <input type="text" name="firstname" id="firstname" placeholder="Prénom" value="">
-          <input type="text" name="lastname" id="lastname" placeholder="Nom">
-          <input type="email" name="email" id="email" placeholder="Email">
-          <input type="text" name="subject" id="subject" placeholder="Objet :">
-          <textarea name="message" id="message" placeholder="Votre message ..."></textarea>
+          <input type="text" name="firstname" id="firstname" placeholder="Prénom" required>
+          <input type="text" name="lastname" id="lastname" placeholder="Nom" required>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+          <input type="text" name="subject" id="subject" placeholder="Objet :" required>
+          <textarea name="message" id="message" placeholder="Votre message ..." required></textarea>
           <button class="send-email" type="submit">Envoyer le formulaire</button>
       </form>
     </div>
