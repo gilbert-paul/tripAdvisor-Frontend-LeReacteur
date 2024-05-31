@@ -2,6 +2,7 @@ const contactButton = document.querySelector(".contact-button")
 const contactModal = document.querySelector(".contact")
 const closeModal = document.querySelector(".close")
 const contactForm = document.querySelector(".form-contact")
+const messageResponse= document.querySelector(".message-response")
 
 
 contactButton?.addEventListener("click",()=>{
@@ -25,16 +26,25 @@ contactForm?.addEventListener("submit", async(event)=>{
     subject:document.querySelector("#subject").value,
     message:document.querySelector("#message").value,
   }
+
+  try {
   const {firstname, lastname, email, subject, message} = allInformations
   if(!firstname || !lastname || !email || !subject || !message){
-    alert("Merci de remplir tous les champs")
+    messageResponse?.classList.add("error-message")
+    messageResponse.innerHTML = "Tous les champs doivent être remplis !"
+    return
   }
-  try {
-    const response = await axios.post("https://site--backend-tripadvisor--j7d4wbg742nf.code.run/send-email", allInformations);
-    alert(response.data.message)
+  await axios.post("https://site--backend-tripadvisor--j7d4wbg742nf.code.run/send-email", allInformations);
+
+      messageResponse?.classList.add("success-message")
+      messageResponse.innerHTML = "Message envoyé avec succès !"
+
 
   } catch (error) {
-    alert("Une erreur est survenue")
+    messageResponse?.classList.add("error-message")
+    messageResponse.innerHTML = "Votre message n'a pas pu être délivré, suite à une erreur serveur, ré-essayez dans quelques instants."
+
+
     
   }
 
